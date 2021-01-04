@@ -82,11 +82,15 @@ open("history.log", "w").close()
 
 
 print("\nTimes:")
+
 for t in time_info:
     t = t.rstrip("\n")
     print(t)
 
     schedule.every().day.at(t.rstrip("\n")).do(login)
+
+login()
+# logs in initially when run
 
 while True:  # checks if it is time to login
     schedule.run_pending()
