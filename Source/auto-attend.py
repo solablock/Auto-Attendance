@@ -51,6 +51,8 @@ def login():  # logs into Canvas and opens all classes
             f.write(log + "\n")
             f.close()
 
+            time.sleep(10)
+
 
 def get_driver():  # creates web driver
 
